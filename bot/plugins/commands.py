@@ -133,16 +133,23 @@ Join on our channel to get movies ✅
                 update.from_user.first_name),
         parse_mode="html",
         reply_to_message_id=update.message_id
+    await bot.send_message(
+
+        chat_id=update.chat.id,
+
+        text=Translation.START_TEXT.format(
+
+                update.from_user.first_name),
+
+        reply_markup=reply_markup,
+
+        parse_mode="html",
+
+        reply_to_message_id=update.message_id
+
     )
 
-    await bot.send_message(
-        chat_id=update.chat.id,
-        text=Translation.START_TEXT.format(
-                update.from_user.first_name),
-        reply_markup=reply_markup,
-        parse_mode="html",
-        reply_to_message_id=update.message_id
-    )
+    
 
 
 @Client.on_message(filters.command(["help"]) & filters.private, group=1)
