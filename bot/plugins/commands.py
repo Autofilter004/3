@@ -127,7 +127,7 @@ Join on our channel to get movies ✅
     reply_markup = InlineKeyboardMarkup(buttons)
    
     
-    await bot.send_message(
+    await bot.send_photo(
         chat_id=update.chat.id,
         photo = 'https://telegra.ph/file/6824a00f2babc136862cd.jpg',
         caption=Translation.START_TEXT.format(
