@@ -139,7 +139,7 @@ Join on our channel to get movies ✅
     await bot.send_message(
 
         chat_id=update.chat.id,
-        photo = 'https://telegra.ph/file/6824a00f2babc136862cd.jpg',
+        
         text=Translation.START_TEXT.format(
 
                 update.from_user.first_name),
